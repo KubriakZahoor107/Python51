@@ -30,42 +30,20 @@
 git clone https://github.com/KubriakZahoor107/Python51.git
 cd Python51
 2) Налаштування бази даних
-sql
-Копировать
-Редактировать
 CREATE USER myuser WITH PASSWORD 'your_password';
 CREATE DATABASE artculture_db OWNER myuser;
 3) Віртуальне середовище та залежності
 macOS / Linux:
-
-bash
-Копировать
-Редактировать
 python3 -m venv .venv
 source .venv/bin/activate
 Windows:
-
-bash
-Копировать
-Редактировать
 python -m venv .venv
 .venv\Scripts\activate
 Встановіть залежності:
-
-bash
-Копировать
-Редактировать
 pip install -r requirements.txt
 Створіть .env:
-
-env
-Копировать
-Редактировать
 DATABASE_URL="postgresql://myuser:your_password@localhost:5432/artculture_db"
 4) Запуск сервісу
-bash
-Копировать
-Редактировать
 uvicorn main:app --reload --reload-exclude .venv
 http://127.0.0.1:8000
 http://127.0.0.1:8000/docs
@@ -76,5 +54,5 @@ GET /art-terms — Try it out → Execute → знайти "id": 9
 GET /ai/analyze-artwork/9 — Try it out → Execute → оригінальний і AI‑згенерований опис
 
 Примітка про AI
-Наразі використовується імітація відповіді AI.
-Підключення реальної моделі: main.py → analyze_artwork.
+Для демонстрації роботи сервісу я імітував відповідь від AI. Підключення реальної моделі: main.py → analyze_artwork.
+Це дозволило сконцентруватися на архітектурі сервісу та його взаємодії з базою даних.

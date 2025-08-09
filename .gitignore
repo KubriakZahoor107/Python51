@@ -3,3 +3,13 @@
 venv/
 __pycache__/
 *.pyc
+
+# IDE/cache
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# Virtual envs
+.venv/
+venv/
